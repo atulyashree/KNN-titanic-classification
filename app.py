@@ -39,9 +39,6 @@ def predict():
     else:
       sex = 0
 
-      
-    from sklearn.preprocessing import MinMaxScaler
-    sc = MinMaxScaler()
     
     
     prediction = model.predict(sc.transform([[pclass, sex, age, sibsp, parch, fare]]))
