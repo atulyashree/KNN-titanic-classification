@@ -7,8 +7,6 @@ import pickle
 app = Flask(__name__)
 model = pickle.load(open('KNN_Titanic.pkl','rb'))
 dataset = pd.read_csv('train.csv')
-X=dataset.iloc[:,[2,4,5,6,7,9]].values
-
 
 
 @app.route('/')
