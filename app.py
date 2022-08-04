@@ -1,12 +1,10 @@
 import numpy as np
 from flask import Flask, request, jsonify, render_template
-import pandas as pd
 import pickle
 
 
 app = Flask(__name__)
 model = pickle.load(open('KNN_Titanic.pkl','rb'))
-dataset = pd.read_csv('train.csv')
 
 
 @app.route('/')
