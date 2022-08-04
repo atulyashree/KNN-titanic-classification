@@ -39,7 +39,7 @@ def predict():
 
     
     
-    prediction = classifier.predict(sc.transform([[pclass, sex, age, sibsp, parch, fare]]))
+    prediction = classifier.predict([[pclass, sex, age, sibsp, parch, fare]])
     
     print("Survived", prediction)
     if prediction==[1]:
